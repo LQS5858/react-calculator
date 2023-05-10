@@ -4,14 +4,13 @@ import utils from './utils'
 import {nPlus,nMinus,nTimes,nDiv} from './math'
 import { useEffect } from 'react'
 
-
+  // 哈希表记录输入值和运算符号值
 let resultHash=new Map()
 
 const operatorKey:string[]=['+','-','x','÷']
 let isEqual=false
 
 export default function Calculator() {
-  // 哈希表记录未按原算符号输入值和按了预算符输入值和计算器结果值
   let [result,setResult]=useState('0')
   
   const appendOperator=(char:string):void=>{
